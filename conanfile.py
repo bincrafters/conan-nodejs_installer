@@ -9,7 +9,7 @@ class NodejsInstallerConan(ConanFile):
     name = "nodejs_installer"
     version = "10.15.0"
     description = "nodejs binaries for use in recipies"
-    topics = ("conan", "node", "nodejs", "logging")
+    topics = ("conan", "node", "nodejs")
     url = "https://github.com/bincrafters/conan-nodejs_installer"
     homepage = "https://nodejs.org"
     author = "Bincrafters <bincrafters@gmail.com>"
@@ -48,7 +48,8 @@ class NodejsInstallerConan(ConanFile):
         self.copy(pattern="*", src=self._build_subfolder, dst="", keep_path=True)
 
     def package_info(self):
-        bin_dir = os.path.join(self.package_folder, "bin")
         if tools.os_info.is_windows:
             bin_dir = self.package_folder
+        else:
+            bin_dir = os.path.join(self.package_folder, "bin")
         self.env_info.PATH.append(bin_dir)
