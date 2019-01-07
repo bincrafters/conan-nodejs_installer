@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import os
-import platform
-
 from bincrafters import build_template_installer, build_shared
 
 
