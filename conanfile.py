@@ -20,7 +20,7 @@ class NodejsInstallerConan(ConanFile):
     _build_subfolder = "build_subfolder"
 
     def configure(self):
-        if arch = self.settings.arch_build == "x86" and self.settings.os_build == "Linux":
+        if self.settings.arch_build == "x86" and self.settings.os_build == "Linux":
             raise ConanInvalidConfiguration("Linux x86 is not support by nodejs 10.15.0")
 
     def source(self):
