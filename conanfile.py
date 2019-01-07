@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import os
-import shutil
-from conans import ConanFile, AutoToolsBuildEnvironment, tools
+from conans import ConanFile, tools
 from conans.errors import ConanInvalidConfiguration
 
 
