@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 import os
 from conans import ConanFile, tools
 from conans.errors import ConanInvalidConfiguration
@@ -12,7 +10,6 @@ class NodejsInstallerConan(ConanFile):
     topics = ("conan", "node", "nodejs")
     url = "https://github.com/bincrafters/conan-nodejs_installer"
     homepage = "https://nodejs.org"
-    author = "Bincrafters <bincrafters@gmail.com>"
     license = "MIT"
     exports = ["LICENSE.md"]
     exports_sources = "nodejs.patch"
